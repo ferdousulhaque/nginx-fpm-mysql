@@ -30,13 +30,16 @@ services:
         - MYSQL_USER=${MYSQL_USER}
         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     mysql:
-      image: mysql:latest
+      image: mysql:5.7
       container_name: mysql
       ports:
         - "3306:3306"
       links:
         - php
       # command: --init-file /data/application/init.sql
+      # command: mysqld --plugin-load=mysqlx=mysqlx.so
+      # command: mysqld --default-authentication-plugin=mysql_native_password
+      # entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
       environment: 
         - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
         - MYSQL_DATABASE=${MYSQL_DATABASE}
