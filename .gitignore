@@ -1,5 +1,6 @@
 /.env
 /dbdata
+/logs
 /webroot/microapi
 /webroot/backoffice/node_modules
 /webroot/backoffice/public/hot
