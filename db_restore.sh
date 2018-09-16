@@ -8,5 +8,5 @@ else
     # MySQL Restore if DB not Exist
     # docker exec $1 mysql -u root -prootPassw0rd webserver < dbstructure/dbdump.sql
     # MySQL Restore if DB Exist
-    docker exec $1 mysqlimport -u root -prootPassw0rd webserver /dbstructure/dbdump.sql
+    # docker exec $1 mysqlimport -u root -prootPassw0rd webserver ./dbstructure/dbdump.sql
 fi
