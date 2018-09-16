@@ -7,7 +7,11 @@ services:
         - "8080:80"
       volumes:
         - ./webroot:/webroot
+        # - ./ssl/nginx-selfsigned.crt:/etc/ssl/certs/nginx-selfsigned.crt
+        # - ./ssl/nginx-selfsigned.key:/etc/ssl/private/nginx-selfsigned.key
         - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+        # - ./nginx/nginx-ssl.conf:/etc/nginx/conf.d/default-ssl.conf
+        - ./logs:/var/log/nginx
       links:
         - php
     php:
@@ -33,3 +37,4 @@ services:
         - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       volumes:
         - ./dbdata:/var/lib/mysql
+        - ./dbstructure/dbdump.sql:/docker-entrypoint-initdb.d/dbdump.sql
