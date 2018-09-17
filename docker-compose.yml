@@ -18,6 +18,7 @@ services:
     php:
       build:
         context: ./php
+      container_name: phpfpm
       ports:
         - 9000:9000
       volumes:
