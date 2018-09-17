@@ -1,5 +1,6 @@
-/.env
+.env
 /dbdata
+/dbbackup
 /logs
 /webroot/microapi
 /webroot/backoffice/node_modules

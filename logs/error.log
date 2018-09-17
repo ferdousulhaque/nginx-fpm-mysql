@@ -1,1 +1,4 @@
 2018/09/16 05:33:28 [error] 7#7: *1 directory index of "/webroot/backoffice/" is forbidden, client: 172.19.0.1, server: webserver.local, request: "GET /backoffice/ HTTP/1.1", host: "localhost"
+2018/09/17 04:30:17 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/conf.d/default.conf:1
+2018/09/17 04:31:38 [emerg] 1#1: "events" directive is not allowed here in /etc/nginx/conf.d/default.conf:3
+2018/09/17 04:36:34 [error] 6#6: *7 directory index of "/webroot/backoffice/" is forbidden, client: 172.20.0.5, server: webserver.local, request: "GET /backoffice/ HTTP/1.0", host: "localhost"
